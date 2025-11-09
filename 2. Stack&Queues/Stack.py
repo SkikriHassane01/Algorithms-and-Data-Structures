@@ -35,3 +35,20 @@ if __name__ == "__main__":
     print("Peek item:", stack.peek())
     print("Stack size:", stack.size())
     print("Is stack empty?", stack.is_empty())
+
+    # another way to create a stack
+    # a stack is a list with stack methods, so we can do this:
+    another_stack = []
+    # push method
+    another_stack.append(5)
+    another_stack.extend([6, 7, 8])  # pushing a list
+
+    # pop method
+    popped_item = another_stack.pop() if another_stack else None
+
+    # peak method
+    peek_item = another_stack[-1] if another_stack else None
+
+    print("Another stack contents:", another_stack)
+    print("Popped item from another stack:", popped_item)
+    print("Peek item from another stack:", peek_item)
