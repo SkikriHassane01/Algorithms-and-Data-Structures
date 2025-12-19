@@ -1,6 +1,6 @@
 from typing import List
 import random
-
+from pathlib import Path
 def is_sorted(values: List):
     """
     Check if the values are sorted in Ascending order
@@ -18,7 +18,9 @@ def bogo_sort(values: List):
 
 
 if __name__ == "__main__":
-    with open(r"d:\Projects\Algorithms-and-Data-Structures\Sorting\numbers\10_numbers.txt", "r") as f:
+    numbers_path = r"/mnt/d/Projects/Algorithms-and-Data-Structures/Sorting/numbers"
+    full_path = Path(numbers_path, "10_numbers.txt")
+    with open(full_path, "r") as f:
         content = f.read().strip()
         numbers = eval(content)
     
